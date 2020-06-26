@@ -4,7 +4,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.116.1:8848
+        server-addr: 192.168.1.108:8848
 
 server:
   port: 9092
@@ -14,3 +14,6 @@ management:
     web:
       exposure:
         include: "*"
+feign:
+  sentinel:
+    enabled: true
