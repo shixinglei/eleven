@@ -15,16 +15,5 @@ class NacosProviderApplication {
     public static void main(String[] args) {
         SpringApplication.run(NacosProviderApplication.class, args);
     }
-
-    @Value("${server.port}")
-    private String port;
-
-    @RestController
-    public class EchoController {
-        @GetMapping(value = "/echo/{message}")
-        public String echo(@PathVariable String message) {
-            return "Hello Nacos Discovery " + message + " i am from port " + port;
-        }
-    }
 }
 
